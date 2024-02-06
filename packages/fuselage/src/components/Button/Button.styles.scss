@@ -1,0 +1,174 @@
+@use 'sass:map';
+@use '../../styles/typography.scss';
+@use '../../styles/variables/buttons.scss' as colors;
+@use '../../styles/primitives/button.scss';
+
+.rcx-button {
+  @mixin with-rectangular-size($height, $padding-x, $line-height) {
+    padding: calc((#{$height} - #{$line-height}) / 2 - 2px)
+      calc(#{$padding-x} - 2px);
+    padding-block: calc((#{$height} - #{$line-height}) / 2 - 2px);
+    padding-inline: calc(#{$padding-x} - 2px);
+  }
+
+  @mixin with-squared-size($size) {
+    width: $size;
+    height: $size;
+    padding: 0;
+
+    &::before,
+    &::after {
+      display: inline-block;
+
+      height: 100%;
+
+      content: '';
+      vertical-align: middle;
+    }
+  }
+
+  display: inline-block;
+
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+
+  @include clickable;
+  @include typography.use-font-scale(p2m);
+  @include typography.use-text-ellipsis;
+
+  @include with-rectangular-size(
+    $height: 40px,
+    $padding-x: 16px,
+    $line-height: typography.line-height(p2)
+  );
+
+  @include button.kind-variant(colors.$secondary);
+
+  &--small {
+    @include typography.use-font-scale(c2);
+
+    @include with-rectangular-size(
+      $height: 28px,
+      $padding-x: 8px,
+      $line-height: typography.line-height(c1)
+    );
+  }
+
+  &--square {
+    @include with-squared-size($size: 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &--tiny-square {
+    @include with-squared-size($size: 24px);
+  }
+
+  &--mini-square {
+    @include with-squared-size($size: 20px);
+  }
+
+  &--small-square {
+    @include with-squared-size($size: 28px);
+  }
+
+  &--info {
+    @include button.kind-variant(colors.$secondary-info);
+  }
+
+  &--success {
+    @include button.kind-variant(colors.$secondary-success);
+  }
+
+  &--warning {
+    @include button.kind-variant(colors.$secondary-warning);
+  }
+
+  &--danger {
+    @include button.kind-variant(colors.$secondary-danger);
+  }
+
+  &--primary {
+    @include button.kind-variant(colors.$primary);
+  }
+
+  &--primary-info {
+    @include button.kind-variant(colors.$info);
+  }
+
+  &--primary-success {
+    @include button.kind-variant(colors.$success);
+  }
+
+  &--primary-warning {
+    @include button.kind-variant(colors.$warning);
+  }
+
+  &--primary-danger {
+    @include button.kind-variant(colors.$danger);
+  }
+
+  &--ghost {
+    @include button.kind-variant(colors.$ghost);
+  }
+
+  &--ghost-info {
+    @include button.kind-variant(colors.$ghost-info);
+  }
+
+  &--ghost-success {
+    @include button.kind-variant(colors.$ghost-success);
+  }
+
+  &--ghost-warning {
+    @include button.kind-variant(colors.$ghost-warning);
+  }
+
+  &--ghost-danger {
+    @include button.kind-variant(colors.$ghost-danger);
+  }
+
+  &--nude {
+    @include button.kind-variant(colors.$nude);
+  }
+
+  &--nude-info {
+    @include button.kind-variant(colors.$nude-info);
+  }
+
+  &--nude-success {
+    @include button.kind-variant(colors.$nude-success);
+  }
+
+  &--nude-warning {
+    @include button.kind-variant(colors.$nude-warning);
+  }
+
+  &--nude-danger {
+    @include button.kind-variant(colors.$nude-danger);
+  }
+
+  &--ghostish {
+    @include button.kind-variant(colors.$ghostish);
+  }
+
+  &--ghostish-info {
+    @include button.kind-variant(colors.$ghostish-info);
+  }
+
+  &--ghostish-success {
+    @include button.kind-variant(colors.$ghostish-success);
+  }
+
+  &--ghostish-warning {
+    @include button.kind-variant(colors.$ghostish-warning);
+  }
+
+  &--ghostish-danger {
+    @include button.kind-variant(colors.$ghostish-danger);
+  }
+}
