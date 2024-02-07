@@ -72,10 +72,10 @@
     "typescript": "~4.3.5"
   },
   "dependencies": {
+    "@hello.chat/logo": "workspace:~",
     "@rocket.chat/fuselage": "workspace:~",
     "@rocket.chat/fuselage-hooks": "workspace:~",
     "@rocket.chat/icons": "workspace:~",
-    "@rocket.chat/logo": "workspace:~",
     "@rocket.chat/styled": "workspace:~",
     "i18next": "~21.6.11",
     "react-hook-form": "~7.27.0",

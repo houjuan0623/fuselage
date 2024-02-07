@@ -1,23 +1,22 @@
 {
-  "name": "@rocket.chat/logo",
+  "name": "@hello.chat/logo",
   "version": "0.31.9",
-  "description": "Rocket.Chat logo package",
+  "description": "Hello.Chat logo package",
   "keywords": [
-    "rocketchat",
-    "rocketchat logo"
+    "hellochat",
+    "hellochat logo"
   ],
   "author": {
-    "name": "Rocket.Chat",
-    "url": "https://rocket.chat/"
+    "name": "Seconp",
+    "url": "https://github.com/houjuan0623"
   },
-  "homepage": "https://github.com/RocketChat/Rocket.Chat.Fuselage#readme",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RocketChat/Rocket.Chat.Fuselage.git",
+    "url": "git+https://github.com/houjuan0623/fuselage.git",
     "directory": "packages/logo"
   },
   "bugs": {
